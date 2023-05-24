@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  display: grid;
+  grid-template-columns: minmax(150px, 200px) 1fr minmax(150px, 200px);
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  grid-template-areas: 
+  "header header header"
+  "nav main aside"
+  "footer footer footer"
+}
+
+@media (max-width: 650px) {
+  aside {
+    display: none;
+  }
+
+  body {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "header header"
+    "nav main"
+    "footer footer";
+}
+
+@media (max-width: 500px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header"
+    "nav"
+    "main"
+    "footer";
+  }
+}
+
+
+}
+.element {
+  text-align: center;
+  color: whitesmoke;
+  padding: 10px;
+  text-shadow: 2px 2px 2px black;
+  font-size: 1.8rem;
+  background-color: rgb(131, 221, 186);
+}
+
+.element-1 {
+  background-color: rgb(137, 70, 192);
+}
+
+.element-3 {
+  background-color: rgb(228, 186, 73);
+}
+
+.element-4 {
+  background-color: rgb(78, 89, 240);
+}
+
+.element-5 {
+  background-color: rgb(252, 211, 99);
+}
+
+
+
+.element-6 {
+  background-color: rgb(236, 147, 105);
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
